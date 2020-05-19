@@ -72,7 +72,7 @@ def post_publish(request, pk):
 @login_required
 def comment_approve(request, pk):
     comment = get_object_or_404(Comment, pk=pk)
-    comment.approve()
+    comment.approve_comment()
     return redirect('post_detail', pk=comment.post.pk)
 
 @login_required
